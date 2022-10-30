@@ -68,7 +68,7 @@
             <div class="row">
               <div class="d-flex flex-column mb-3 p-0">
                 <div class="py-4">
-                  <div class="card w-auto">
+                  <a href="" class="card w-auto text-decoration-none">
                     <div class="card-body d-flex">
                       <img
                         class="flex-item preview-pict w-25"
@@ -77,7 +77,7 @@
                       />
                       <div class="d-flex align-items-center">
                         <div class="">
-                          <h5 class="article-title m-0 d-flex px-2">
+                          <h5 class="article-title m-0 d-flex px-2 text-dark">
                             Lorem Ipsum
                           </h5>
                           <p
@@ -93,10 +93,10 @@
                         </div>
                       </div>
                     </div>
-                  </div>
+                  </a>
                 </div>
                 <div class="">
-                  <div class="card w-auto">
+                  <a class="card w-auto text-decoration-none" href="">
                     <div class="card-body d-flex">
                       <img
                         class="flex-item preview-pict w-25"
@@ -105,7 +105,7 @@
                       />
                       <div class="d-flex align-items-center">
                         <div class="">
-                          <h5 class="article-title m-0 d-flex px-2">
+                          <h5 class="article-title m-0 d-flex px-2 text-dark">
                             Lorem Ipsum
                           </h5>
                           <p
@@ -121,10 +121,10 @@
                         </div>
                       </div>
                     </div>
-                  </div>
+                  </a>
                 </div>
                 <div class="py-4">
-                  <div class="card w-auto">
+                  <a class="card w-auto text-decoration-none" href="">
                     <div class="card-body d-flex">
                       <img
                         class="flex-item preview-pict w-25"
@@ -133,7 +133,7 @@
                       />
                       <div class="d-flex align-items-center">
                         <div class="">
-                          <h5 class="article-title m-0 d-flex px-2">
+                          <h5 class="article-title m-0 d-flex px-2 text-dark">
                             Lorem Ipsum
                           </h5>
                           <p
@@ -149,7 +149,7 @@
                         </div>
                       </div>
                     </div>
-                  </div>
+                  </a>
                 </div>
               </div>
             </div>
@@ -174,6 +174,10 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
+.card-body {
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
 .subs {
   color: #309c9f;
 }
