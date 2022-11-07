@@ -11,11 +11,7 @@
               <button class="col btn2" type="button">Sign In</button>
             </div> -->
             <div class="row">
-              <button
-                class="col btn3 btn-primary text-light"
-                type="button"
-                @click="speak()"
-              >
+              <button class="col btn3 btn-primary text-light" type="button">
                 <div
                   class="d-flex justify-content-start align-items-center px-3"
                 >
@@ -33,7 +29,7 @@
             </div>
             <div class="flex-item">
               <h6 class="card-title d-flex justify-content-between mt-4">
-                <h5 class="card-subtitle mb-2">{{ form.id_user }}</h5>
+                <h5 class="card-subtitle mb-2">Contributor Name</h5>
                 <span style="float: right">
                   <img src="../assets/report.svg" alt="" />
                 </span>
@@ -167,7 +163,7 @@
 <script>
 import ArticleNavbar from "./ArticleNavbar.vue";
 import ArticleTab from "./ArticleTab.vue";
-import axios from "axios";
+// import axios from "axios";
 export default {
   name: "App",
   components: {
@@ -175,63 +171,9 @@ export default {
     ArticleTab,
   },
   data() {
-    return {
-      form: {
-        id_artikel: "",
-        id_user: "",
-        cover_artikel: "",
-        judul_artikel: "",
-        deskripsi_artikel: "",
-        isi_artikel: "",
-      },
-      speakData: {
-        synth: window.speechSynthesis,
-        validation: false,
-      },
-    };
+    return {};
   },
-  methods: {
-    getItem() {
-      axios
-        .get("http://localhost:3000/artikel/publish/ART0000000004")
-        .then((response) => {
-          this.form = response.data;
-          console.log(this.form);
-        })
-        .catch((error) => {
-          console.log("Error Get Data ", error);
-        });
-    },
-    speak() {
-      if (this.speakData.synth.speaking) {
-        console.error("speechSynthesis.speaking");
-        this.speakData.synth.cancel();
-        return;
-      }
-
-      if (this.form.isi_artikel !== "") {
-        this.speakData.validation = false;
-        const data =
-          "Title : " +
-          this.form.judul_artikel +
-          "\n\n\n" +
-          "Description : " +
-          this.form.deskripsi_artikel +
-          "\n\n\n" +
-          "content : " +
-          this.form.isi_artikel;
-        let sInstance = new SpeechSynthesisUtterance(data);
-        sInstance.lang = "id-ID";
-        sInstance.pitch = "50.0";
-        this.speakData.synth.speak(sInstance);
-      } else {
-        this.speakData.validation = true;
-      }
-    },
-  },
-  mounted() {
-    this.getItem();
-  },
+  methods: {},
 };
 </script>
 

@@ -6,15 +6,15 @@
 </template>
 
 <script>
-import PageFooter from './components/PageFooter.vue'
-import ArticlePage from './components/ArticlePage.vue'
+import PageFooter from "./components/PageFooter.vue";
+import ArticlePage from "./components/ArticlePage.vue";
 export default {
-  name: 'App',
+  name: "App",
   components: {
     ArticlePage,
-    PageFooter
-  }
-}
+    PageFooter,
+  },
+};
 </script>
 
 <style>
